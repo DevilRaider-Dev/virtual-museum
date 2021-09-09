@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #D1C3B4;
+}
+
+#searchbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-bottom: 1vh;
+}
+
+#searchbar input, #searchbar select {
+  margin-right: .3vw;
+}
+
+#searchbar select {
+  width: 20vw;
+}
+
+#container {
+  border-top: 3px double #000;
+}
+/*# sourceMappingURL=style.css.map */
