@@ -1,31 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
-body {
-  background-color: #D1C3B4;
+/* 
+section{
+    div{
+
+    }
 }
 
-#searchbar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  padding-bottom: 1vh;
+section{
+
 }
 
-#searchbar input, #searchbar select {
-  margin-right: .3vw;
-}
+section div{
 
-#searchbar select {
-  width: 20vw;
-}
-
-#container {
-  border-top: 3px double #000;
+} */
+#header {
+  height: 100vh;
+  background: url("../img/Background_1.jpg") center/cover no-repeat;
 }
 /*# sourceMappingURL=style.css.map */

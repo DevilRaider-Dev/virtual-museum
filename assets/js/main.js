@@ -29,5 +29,8 @@ fetch(`https://newsapi.org/v2/everything?${search}${date}${lang}sortBy=popularit
 fetch(`https://api.harvardartmuseums.org/person?q=displayname:gogh&apikey=2cf58dfc-f8e1-42b2-84af-24cda9d00b73`)
     .then(response => response.json())
     .then(data => {
-        console.log(data)
+        console.log(data.records[0].url)
+        console.log(data.records[0].url.split("/").slice(-1))
     });
+
+    
