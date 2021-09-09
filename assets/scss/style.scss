@@ -20,7 +20,39 @@ section div{
 
 } */
 
+#navbar{
+    height: 10vh;
+    position: 
+    h3{
+        margin-right: 50vw;
+    }
+    ul{
+        display: flex;
+
+    }
+}
+
+
 #header{
     height: 100vh;
     background: url("../img/Background_1.jpg") center/cover no-repeat;
+    
+}
+
+#discover{
+    height: 100vh;
+    background: url("../img/Background_2.jpg") center/cover no-repeat;
+
+}
+
+#galery{
+    height: 100vh;
+    background: url("../img/Background_3.jpg") center/cover no-repeat;
+
+}
+
+#footer{
+    height: 100vh;
+    background: url("../img/Background_4.jpg") center/cover no-repeat;
+
 }

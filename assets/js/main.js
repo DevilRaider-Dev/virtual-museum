@@ -25,12 +25,15 @@ fetch(`https://newsapi.org/v2/everything?${search}${date}${lang}sortBy=popularit
 //https://ids.lib.harvard.edu/ids/iiif/22730
 //${}
 
+let person = ""
 
 fetch(`https://api.harvardartmuseums.org/person?q=displayname:gogh&apikey=2cf58dfc-f8e1-42b2-84af-24cda9d00b73`)
     .then(response => response.json())
     .then(data => {
         console.log(data.records[0].url)
-        console.log(data.records[0].url.split("/").slice(-1))
+        person = data.records[0].url.split("/").slice(-1)[0]
     });
 
-    
+console.log(person)
+
+    fetch(`https://api.harvardartmuseums.org/gallery?q=&apikey=2cf58dfc-f8e1-42b2-84af-24cda9d00b73`)
