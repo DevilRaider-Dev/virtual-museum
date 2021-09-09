@@ -1,39 +1,57 @@
+let images = "width:<800";
+let slides = [
+  "first slide",
+  "second slide",
+  "third slide",
+  "fourth slide",
+  "fifth slide",
+  "sixth slide",
+  "seventh slide",
+  "eighth slide",
+  "ninth slide",
+  "tenth slide",
+];
 
+let records = [
+  { baseimageurl: "https://unsplash.it/600" },
+  { baseimageurl: "https://unsplash.it/601" },
+  { baseimageurl: "https://unsplash.it/602" },
+  { baseimageurl: "https://unsplash.it/603" },
+  { baseimageurl: "https://unsplash.it/604" },
+  { baseimageurl: "https://unsplash.it/605" },
+  { baseimageurl: "https://unsplash.it/606" },
+  { baseimageurl: "https://unsplash.it/606" },
+  { baseimageurl: "https://unsplash.it/607" },
+  { baseimageurl: "https://unsplash.it/608" },
+  { baseimageurl: "https://unsplash.it/609" },
+];
 
-/*
-fetch(`https://newsapi.org/v2/everything?${search}${date}${lang}sortBy=popularity&pageSize=5&apiKey=e04c883960964f798c33f40649f2b4b9`)
-    .then(response => response.json())
-    .then(data => {
-        console.log(data)
+const carousel = document.getElementById("carousel-container");
 
-        let articles = data.articles
+/* fetch(`https://api.harvardartmuseums.org/image?q=${images}&apikey=2cf58dfc-f8e1-42b2-84af-24cda9d00b73`)
+  .then((response) => response.json())
+  .then((data) => { */
+ 
+    console.log(records)
 
-        articles.forEach(e => {
+    //for (i = 0; i < data.records.length; i++) {
+      for (i = 0; i < records.length; i++) {
+      if (i < 10) {
+        if (i == 0) {
+          //set active
+          carousel.innerHTML += `<div class="carousel-item active"><img class="d-block w-100" src="${records[i].baseimageurl}" alt="${slides[i]}"></div>`;
+        } else {
+          carousel.innerHTML += `<div class="carousel-item"><img class="d-block w-100" src="${records[i].baseimageurl}" alt="${slides[i]}"></div>`;
+        }
+      }
+    }
 
-        let mainNews = new News(e.title, e.description, e.publishedAt, e.urlToImage, e.url)
-
-        mainNews.pushNews()
-    })
-})
-}
-*/
-
-
-//https://api.harvardartmuseums.org/person?q=culture:english
-//search "https://www.harvardartmuseums.org/collections/person/22730"
-//https://nrs.harvard.edu/urn-3:HUAM:OCP16703_dynmc?height=150&width=150
-//https://ids.lib.harvard.edu/ids/iiif/22730
-//${}
-
-let person = ""
-
-fetch(`https://api.harvardartmuseums.org/person?q=displayname:gogh&apikey=2cf58dfc-f8e1-42b2-84af-24cda9d00b73`)
-    .then(response => response.json())
-    .then(data => {
-        console.log(data.records[0].url)
-        person = data.records[0].url.split("/").slice(-1)[0]
-    });
-
-console.log(person)
-
-    fetch(`https://api.harvardartmuseums.org/gallery?q=&apikey=2cf58dfc-f8e1-42b2-84af-24cda9d00b73`)
+    carousel.innerHTML += `<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>`;
+  //});

@@ -13,34 +13,86 @@
 </head>
 
 <body>
-  <!-- 1. Seite -->
-  <div id="navbar">
-    <h3>FArtS</h3>
-    <ul>
-      <li><a href="#header">HOME</a></li>
-      <li><a href="#discover">DISCOVER</a></li>
-      <li><a href="#gallery">GALLERY</a></li>
-      <li><a href="footer">CONTACT</a></li>
-    </ul>
+  <!-- Navigation -->
+  <div id="wrapper">
+    <div id="navbar">
+      <h3>FArtS</h3>
+      <ul>
+        <li><a href="#header">HOME</a></li>
+        <li><a href="#discover">DISCOVER</a></li>
+        <li><a href="#gallery">GALLERY</a></li>
+        <li><a href="#footer">CONTACT</a></li>
+      </ul>
+    </div>
   </div>
 
+  <!-- 1. Seite: Welcome -->
   <section id="header">
     <article>
       <p>WELCOME TO THE WORLD OF</p>
       <h1>FArtS</h1>
-      <p>DIGITAL<span>ART</span>GALLERY</p>
+      <p>DIGITAL<span id="space">ART</span>GALLERY</p>
     </article>
   </section>
+  <!-- ********************** -->
+
+  <!-- 2. Seite: Discover -->
   <section id="discover">
-    
+    <div id="containerCaroussel">
+      <!-- carousel -->
+      <div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
+        <div id="carousel-container" class="carousel-inner">
+        </div>
+        
+      </div>
+      <!-- carousel -->
+    </div>
   </section>
+  <!-- ********************** -->
+
+      <!-- Gallery search function -->   
   <section id=gallery>
-
+    <aside>
+      <form action="">
+        <input type="text" class="textField" placeholder="Artist" id="inputArtist">
+        <input type="text" class="textField" placeholder="Year" id="inputYear">
+        <input type="text" class="textField" placeholder="???" id="">
+        <input type="text" class="textField" placeholder="???" id="">
+        <input type="text" class="textField" placeholder="???" id="">
+        <input type="button" value="Search" onclick="searchArt()" id="searchButton">
+      </form>
+    </aside>
+    <div id="containerGallery">
+      <img src="" alt="" id="img-1">
+    </div>
   </section>
-  <section id=footer>
 
+  <!-- 4. Seite: Contact -->
+
+  <section id="footer">
+    <article>
+      <h2>Thank you for your visit</h2>
+      <h2>Contact Us</h2>
+    </article>
+    <div id="contact">
+      <article>
+        Museum Hours<br>
+        Daily, 10am-5pm<br>
+        Closed major holidays<br>
+      </article>
+      <article></article>
+      <article>
+        Harvard Art Museum<br>
+        32 Quincy Street<br>
+        Cambridge, MA 02138<br>
+        1 (617) 495-9400<br>
+      </article>
+    </div>
+    <article id="social">
+      <a href=""><img src="" alt=""></a>
+      <a href=""><img src="" alt=""></a>
+    </article>
   </section>
-
 
 
 
