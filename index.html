@@ -1,66 +1,78 @@
 <!DOCTYPE html>
 <html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtuel Museum</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Virtuel Museum</title>
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
-</head>
-
-<body>
-  <!-- Navigation -->
-  <div id="wrapper">
-    <div id="navbar">
-      <a href="#"><h3>FArtS</h3></a>
-      <ul>
-        <li><a href="#header">HOME</a></li>
-        <li><a href="#discover">DISCOVER</a></li>
-        <li><a href="#gallery">GALLERY</a></li>
-        <li><a href="#footer">CONTACT</a></li>
-      </ul>
+  <body>
+    <!-- Navigation -->
+    <div id="wrapper">
+      <div id="navbar">
+        <a href="#"><h3>FArtS</h3></a>
+        <ul>
+          <li><a href="#header">HOME</a></li>
+          <li><a href="#discover">DISCOVER</a></li>
+          <li><a href="#gallery">GALLERY</a></li>
+          <li><a href="#footer">CONTACT</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
 
-  <!-- 1. Seite: Welcome -->
-  <section id="header">
-    <article>
-      <p>WELCOME TO THE WORLD OF</p>
-      <h1>FArtS</h1>
-      <p>DIGITAL<span id="space">ART</span>GALLERY</p>
-    </article>
-  </section>
-  <!-- ********************** -->
+    <!-- 1. Seite: Welcome -->
+    <section id="header">
+      <article>
+        <p>WELCOME TO THE WORLD OF</p>
+        <h1>FArtS</h1>
+        <p>DIGITAL<span id="space">ART</span>GALLERY</p>
+      </article>
+    </section>
+    <!-- ********************** -->
 
-  <!-- 2. Seite: Discover -->
-  <section id="discover">
-    <!-- carousel -->
+    <!-- 2. Seite: Discover -->
+    <section id="discover">
+      <!-- carousel -->
       <a href="#discover" onclick="previous()">previous</a>
-    <div id="containerCaroussel">
-    </div>
+      <div id="containerCaroussel">
+        <img id="galleryImg" src="" alt="" />
+      </div>
       <a href="#discover" onclick="next()">next</a>
-    
-  </section>
-  <!-- ********************** -->
+    </section>
+    <!-- ********************** -->
 
-      <!-- Gallery search function -->   
-  <section id=gallery>
-    <aside>
-      <form action="">
-        <label for="">Search for your<br> favourite artist</label>
-        <input type="text" class="textField" placeholder="Artist" id="inputArtist">
-        <!-- <input type="text" class="textField" placeholder="Year" id="inputYear">
+    <!-- Gallery search function -->
+    <section id="gallery">
+      <aside>
+        <form action="">
+          <label for=""
+            >Search for your<br />
+            favourite artist</label
+          >
+          <input
+            type="text"
+            class="textField"
+            placeholder="Artist"
+            id="inputArtist"
+          />
+          <!-- <input type="text" class="textField" placeholder="Year" id="inputYear">
         <input type="text" class="textField" placeholder="???" id="">
         <input type="text" class="textField" placeholder="???" id="">
         <input type="text" class="textField" placeholder="???" id=""> -->
-        <a href="#gallery" type="button" onclick="searchArt()" id="searchButton">Search</a>
-      </form>
-    </aside>
-    <div id="containerGallery">
-      <div id="cardImage"></div>
-      <table>
+          <a
+            href="#gallery"
+            type="button"
+            onclick="searchArt()"
+            id="searchButton"
+            >Search</a
+          >
+        </form>
+      </aside>
+      <div id="containerGallery">
+        <div id="cardImage"></div>
+        <table>
           <tr>
             <td>Name</td>
             <td id="displayname"></td>
@@ -83,40 +95,44 @@
             <td id="death"></td>
           </tr>
           <tr></tr>
-          <tr><td><a href="" id="galleryURL">Gallery</a></td><td><a href="" id="wikidataURL">WikiData</a></td></tr>
-      </table>
-    </div>
-  </section>
+          <tr>
+            <td><a href="" id="galleryURL">Gallery</a></td>
+            <td><a href="" id="wikidataURL">WikiData</a></td>
+          </tr>
+        </table>
+      </div>
+    </section>
 
-  <!-- 4. Seite: Contact -->
+    <!-- 4. Seite: Contact -->
 
-  <section id="footer">
-    <article>
-      <h2>Thank you for your visit</h2>
-      <h2>Contact Us</h2>
-    </article>
-    <div id="contact">
+    <section id="footer">
       <article>
-        Museum Hours<br>
-        Daily, 10am-5pm<br>
-        Closed major holidays<br>
+        <h2>Thank you for your visit</h2>
+        <h2>Contact Us</h2>
       </article>
-      <article></article>
-      <article>
-        Harvard Art Museum<br>
-        32 Quincy Street<br>
-        Cambridge, MA 02138<br>
-        1 (617) 495-9400<br>
+      <div id="contact">
+        <article>
+          Museum Hours<br />
+          Daily, 10am-5pm<br />
+          Closed major holidays<br />
+        </article>
+        <article></article>
+        <article>
+          Harvard Art Museum<br />
+          32 Quincy Street<br />
+          Cambridge, MA 02138<br />
+          1 (617) 495-9400<br />
+        </article>
+      </div>
+      <article id="socials">
+        <a href=""
+          ><img src="assets/img/iconmonstr-instagram-13.svg" alt=""
+        /></a>
+        <a href=""><img src="assets/img/iconmonstr-youtube-8.svg" alt="" /></a>
+        <p>© 2021 President and Fellows of Harvard College</p>
       </article>
-    </div>
-    <article id="socials">
-      <a href=""><img src="assets/img/iconmonstr-instagram-13.svg" alt=""></a>
-      <a href=""><img src="assets/img/iconmonstr-youtube-8.svg" alt=""></a>
-      <p>© 2021 President and Fellows of Harvard College</p>
-    </article>
-  </section>
+    </section>
 
-  <script src="assets/js/main.js"></script>
-</body>
-
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>

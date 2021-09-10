@@ -12,7 +12,6 @@ let slides = [
 ];
 
 const containerCaroussel = document.getElementById("containerCaroussel");
-const galleryImg = document.getElementById("galleryImg");
 
 fetch(
   `https://api.harvardartmuseums.org/image?q=width:<600&apikey=2cf58dfc-f8e1-42b2-84af-24cda9d00b73`
@@ -20,8 +19,7 @@ fetch(
   .then((response) => response.json())
   .then((data) => {
     containerCaroussel.innerHTML = `<p>${data.records[2].date}</p>`
-    
-    <img id="galleryImg" src="" alt="">
+    containerCaroussel.innerHTML += '<img id="galleryImg" src="" alt="">'
     galleryImg.setAttribute("src", data.records[2].baseimageurl);
   });
 
@@ -33,6 +31,7 @@ async function next() {
     .then((response) => response.json())
     .then((data) => {
       containerCaroussel.innerHTML = `<p>${data.records[rnd].date}</p>`
+      containerCaroussel.innerHTML += '<img id="galleryImg" src="" alt="">'
       galleryImg.setAttribute("src", data.records[rnd].baseimageurl);
     });
 }
@@ -45,6 +44,7 @@ async function previous() {
     .then((response) => response.json())
     .then((data) => {
       containerCaroussel.innerHTML = `<p>${data.records[rnd].date}</p>`
+      containerCaroussel.innerHTML += '<img id="galleryImg" src="" alt="">'
       galleryImg.setAttribute("src", data.records[rnd].baseimageurl);
     });
 }
