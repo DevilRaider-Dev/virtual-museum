@@ -5,6 +5,10 @@
   font-family: "Montserrat", sans-serif;
 }
 
+*:focus {
+  outline: none;
+}
+
 /* 
 section{
     div{
@@ -23,7 +27,7 @@ section div{
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 99;
 }
 
 #navbar {
@@ -57,14 +61,14 @@ section div{
 #navbar ul li a {
   text-decoration: none;
   color: black;
-  -webkit-transition: all .5s ease-out;
-  transition: all .5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 #navbar ul li a:hover {
   color: #fff;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 #header {
@@ -72,8 +76,8 @@ section div{
   background: url("../img/Background_1.jpg") center/cover no-repeat;
   padding-top: 30vh;
   text-align: center;
-  -webkit-box-shadow: 0 -5vh 1vh 0 #c0c0c0 inset;
-          box-shadow: 0 -5vh 1vh 0 #c0c0c0 inset;
+  -webkit-box-shadow: 0 -3vh 1vh 0 #c0c0c0 inset;
+          box-shadow: 0 -3vh 1vh 0 #c0c0c0 inset;
 }
 
 #header h1 {
@@ -92,28 +96,42 @@ section div{
 #discover {
   height: 100vh;
   background: url("../img/Background_2.jpg") center/cover no-repeat;
-  -webkit-box-shadow: 0 -5vh 0.5vh 0 #bfbfbf inset, 0 5vh 0.5vh 0 #c0c0c0 inset;
-          box-shadow: 0 -5vh 0.5vh 0 #bfbfbf inset, 0 5vh 0.5vh 0 #c0c0c0 inset;
+  -webkit-box-shadow: 0 -3vh 0.5vh 0 #bfbfbf inset, 0 3vh 0.5vh 0 #c0c0c0 inset;
+          box-shadow: 0 -3vh 0.5vh 0 #bfbfbf inset, 0 3vh 0.5vh 0 #c0c0c0 inset;
 }
 
 #discover #containerCaroussel {
-  padding-top: 50vh;
+  padding-top: 10vh;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #discover #containerCaroussel .carousel-item {
   height: 80vh;
+  width: 60vw;
 }
 
 #gallery {
   height: 100vh;
   background: url("../img/Background_3.jpg") center/cover no-repeat;
-  -webkit-box-shadow: 0 -5vh 1vh 0 grey inset, 0 5vh 1vh 0 #bfbfbf inset;
-          box-shadow: 0 -5vh 1vh 0 grey inset, 0 5vh 1vh 0 #bfbfbf inset;
+  -webkit-box-shadow: 0 -3vh 1vh 0 #A4A4A4 inset, 0 3vh 1vh 0 #bfbfbf inset;
+          box-shadow: 0 -3vh 1vh 0 #A4A4A4 inset, 0 3vh 1vh 0 #bfbfbf inset;
 }
 
 #gallery aside {
-  width: 15vw;
+  width: 20vw;
   height: 80vh;
+}
+
+#gallery aside p {
+  font-size: 2vh;
+  padding-left: 10px;
+  margin-top: 30vh;
 }
 
 #gallery aside form {
@@ -128,10 +146,22 @@ section div{
           flex-direction: column;
 }
 
+#gallery aside form label {
+  padding-bottom: 10px;
+}
+
 #gallery aside form input {
+  width: 80px;
   margin-bottom: 2vh;
-  border-radius: 5px;
-  background-color: #ddd8d8;
+  border-radius: 2px;
+  background-color: #DDDDDD;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+#gallery aside form input:focus {
+  width: 180px;
+  background-color: #fff;
 }
 
 #gallery aside form .textField::-webkit-input-placeholder {
@@ -151,14 +181,25 @@ section div{
 }
 
 #gallery aside form #searchButton {
-  width: 5vw;
+  width: 80px;
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 2px;
+  text-align: center;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+#gallery aside form #searchButton:hover {
+  background-color: #fff;
 }
 
 #footer {
   height: 100vh;
   background: url("../img/Background_4.jpg") center/cover no-repeat;
-  -webkit-box-shadow: 0 -3vh 1vh 0 grey inset, 0 3vh 1vh 0 grey inset;
-          box-shadow: 0 -3vh 1vh 0 grey inset, 0 3vh 1vh 0 grey inset;
+  -webkit-box-shadow: 0 -3vh 1vh 0 #979797 inset, 0 3vh 1vh 0 #A4A4A4 inset;
+          box-shadow: 0 -3vh 1vh 0 #979797 inset, 0 3vh 1vh 0 #A4A4A4 inset;
 }
 
 #footer h2:nth-of-type(1) {
@@ -188,9 +229,18 @@ section div{
   width: 10vw;
 }
 
-#footer #contact #social {
-  height: 15vh;
-  margin-top: 15vh;
-  background-color: #000;
+#footer #socials {
+  text-align: center;
+  margin-top: 8vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#footer #socials a:nth-of-type(2) {
+  padding: 0 3vw 0 1vw;
 }
 /*# sourceMappingURL=style.css.map */

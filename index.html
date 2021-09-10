@@ -6,8 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Virtuel Museum</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 </head>
@@ -38,15 +36,8 @@
 
   <!-- 2. Seite: Discover -->
   <section id="discover">
-    <div id="containerCaroussel">
-      <!-- carousel -->
-      <div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
-        <div id="carousel-container" class="carousel-inner">
-        </div>
-        
-      </div>
-      <!-- carousel -->
-    </div>
+    <!-- carousel -->
+    <div id="containerCaroussel"></div>
   </section>
   <!-- ********************** -->
 
@@ -54,16 +45,42 @@
   <section id=gallery>
     <aside>
       <form action="">
+        <label for="">Search through your <br> favourite galleries</label>
         <input type="text" class="textField" placeholder="Artist" id="inputArtist">
-        <input type="text" class="textField" placeholder="Year" id="inputYear">
+        <!-- <input type="text" class="textField" placeholder="Year" id="inputYear">
         <input type="text" class="textField" placeholder="???" id="">
         <input type="text" class="textField" placeholder="???" id="">
-        <input type="text" class="textField" placeholder="???" id="">
-        <input type="button" value="Search" onclick="searchArt()" id="searchButton">
+        <input type="text" class="textField" placeholder="???" id=""> -->
+        <a href="#gallery" type="button" onclick="searchArt()" id="searchButton">Search</a>
       </form>
     </aside>
     <div id="containerGallery">
-      <img src="" alt="" id="img-1">
+      <table>
+          <tr>
+            <td>Name</td>
+            <td>Culture</td>
+            <td>Birthday</td>
+            <td>Birthplace</td>
+            <td>Death</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td id="displayname"></td>
+            <td id="culture"></td>
+            <td id="birth"></td>
+            <td id="birthplace"></td>
+            <td id="death"></td>
+            <td id="galleryURL">Gallery</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td id="wikidataURL">Wiki</td>
+          </tr>
+
     </div>
   </section>
 
@@ -88,19 +105,13 @@
         1 (617) 495-9400<br>
       </article>
     </div>
-    <article id="social">
-      <a href=""><img src="" alt=""></a>
-      <a href=""><img src="" alt=""></a>
+    <article id="socials">
+      <a href=""><img src="assets/img/iconmonstr-instagram-13.svg" alt=""></a>
+      <a href=""><img src="assets/img/iconmonstr-youtube-8.svg" alt=""></a>
+      <p>© 2021 President and Fellows of Harvard College</p>
     </article>
   </section>
 
-
-
-
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-    crossorigin="anonymous"></script>
   <script src="assets/js/main.js"></script>
 </body>
 

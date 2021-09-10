@@ -5,6 +5,9 @@
   padding: 0;
   font-family: "Montserrat", sans-serif;
 }
+*:focus {
+  outline: none;
+}
 /* 
 section{
     div{
@@ -23,7 +26,7 @@ section div{
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 99;
 }
 
 #navbar {
@@ -42,11 +45,11 @@ section div{
       a {
         text-decoration: none;
         color: black;
-        transition: all .5s ease-out;
+        transition: all 0.5s ease-out;
       }
-      a:hover{
+      a:hover {
         color: #fff;
-        transition: all .5s ease;
+        transition: all 0.5s ease;
       }
     }
   }
@@ -57,7 +60,7 @@ section div{
   background: url("../img/Background_1.jpg") center/cover no-repeat;
   padding-top: 30vh;
   text-align: center;
-  box-shadow: 0 -5vh 1vh 0 #c0c0c0 inset;
+  box-shadow: 0 -3vh 1vh 0 #c0c0c0 inset;
   h1 {
     font-size: 20vh;
     font-weight: bold;
@@ -73,11 +76,15 @@ section div{
 #discover {
   height: 100vh;
   background: url("../img/Background_2.jpg") center/cover no-repeat;
-  box-shadow: 0 -5vh 0.5vh 0 #bfbfbf inset, 0 5vh 0.5vh 0 #c0c0c0 inset;
+  box-shadow: 0 -3vh 0.5vh 0 #bfbfbf inset, 0 3vh 0.5vh 0 #c0c0c0 inset;
   #containerCaroussel {
-    padding-top: 50vh;
+    padding-top: 10vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
     .carousel-item {
       height: 80vh;
+      width: 60vw;
     }
   }
 }
@@ -85,34 +92,61 @@ section div{
 #gallery {
   height: 100vh;
   background: url("../img/Background_3.jpg") center/cover no-repeat;
-  box-shadow: 0 -5vh 1vh 0 grey inset, 0 5vh 1vh 0 #bfbfbf inset;
+  box-shadow: 0 -3vh 1vh 0 #A4A4A4 inset, 0 3vh 1vh 0 #bfbfbf inset;
   aside {
-    width: 15vw;
+    width: 20vw;
     height: 80vh;
+    p{
+      font-size: 2vh;
+      padding-left: 10px;
+      margin-top: 30vh;
+    }
     form {
       padding-top: 35vh;
       margin: 0 1vw;
       display: flex;
       flex-direction: column;
+      label{
+        padding-bottom: 10px;
+      }
       input {
+        width: 80px;
+        height: 60px;
         margin-bottom: 2vh;
-        border-radius: 5px;
-        background-color: rgb(221, 216, 216);
+        border-radius: 2px;
+        background-color: #DDDDDD;
+        transition: all 0.4s ease; 
+        &:focus{
+          width: 180px;
+          background-color: #fff;
+        }
       }
       .textField::placeholder {
         padding-left: 10px;
       }
       #searchButton {
-        width: 5vw;
+        width: 80px;
+        text-decoration: none;
+        color: #000;
+        border: 1px solid #000;
+        border-radius: 2px;
+        text-align: center;
+        transition: all 0.2s;
+        &:hover{
+          background-color: #fff;
+        }
       }
     }
+  }
+  #containerGallery{
+    background-color: #fff;
   }
 }
 
 #footer {
   height: 100vh;
   background: url("../img/Background_4.jpg") center/cover no-repeat;
-  box-shadow: 0 -3vh 1vh 0 grey inset, 0 3vh 1vh 0 grey inset;
+  box-shadow: 0 -3vh 1vh 0 #979797 inset, 0 3vh 1vh 0 #A4A4A4 inset;
   h2:nth-of-type(1) {
     font-size: 10vh;
     padding-top: 17vh;
@@ -131,11 +165,14 @@ section div{
     article:nth-of-type(2) {
       width: 10vw;
     }
-    #social {
-      height: 15vh;
-      margin-top: 15vh;
-      background-color: #000;
-      //   display: inline-block;
+  }
+  #socials {
+    text-align: center;
+    margin-top: 8vh;
+    display: flex;
+    justify-content: center;
+    a:nth-of-type(2){
+      padding: 0 3vw 0 1vw;
     }
   }
 }
