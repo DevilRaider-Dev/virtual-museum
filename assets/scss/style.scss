@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
 }
 *:focus {
   outline: none;
@@ -34,8 +35,15 @@ section div{
   justify-content: space-between;
   align-items: center;
   height: 15vh;
-  h3 {
+  a{
+    text-decoration: none;
+    color: #000;
     margin-left: 2vw;
+    transition: all 0.5s ease-out;
+    &:hover{
+      color: #fff;
+      transition: all 0.5s ease;
+    }
   }
   ul {
     display: flex;
@@ -46,17 +54,17 @@ section div{
         text-decoration: none;
         color: black;
         transition: all 0.5s ease-out;
-      }
-      a:hover {
-        color: #fff;
-        transition: all 0.5s ease;
+        &:hover{
+          color: #fff;
+          transition: all 0.5s ease;
+        }
       }
     }
   }
 }
 
 #header {
-  height: 100vh;
+  height: 75vh;
   background: url("../img/Background_1.jpg") center/cover no-repeat;
   padding-top: 30vh;
   text-align: center;
@@ -77,15 +85,41 @@ section div{
   height: 100vh;
   background: url("../img/Background_2.jpg") center/cover no-repeat;
   box-shadow: 0 -3vh 0.5vh 0 #bfbfbf inset, 0 3vh 0.5vh 0 #c0c0c0 inset;
+  display: flex;
+  align-items: center;
+a{
+  // width: 20vw;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 2px;
+  text-align: center;
+  transition: all 0.3s;
+  padding: 5px;
+  &:nth-of-type(1){
+    margin-left: 10vw;
+  }
+  &:nth-of-type(2){
+    margin-right: 10vw;
+  }
+  &:hover{
+    background-color: #fff;
+  }
+}
+
   #containerCaroussel {
-    padding-top: 10vh;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    .carousel-item {
-      height: 80vh;
+      height: 70vh;
       width: 60vw;
-    }
+      margin: 0 auto;
+      position: relative;
+      img{
+        position: absolute;
+        top: 50%; right: 50%;
+        transform: translate(50%,-50%);
+        height: 100%;
+        margin: auto;
+      }
   }
 }
 
@@ -93,11 +127,13 @@ section div{
   height: 100vh;
   background: url("../img/Background_3.jpg") center/cover no-repeat;
   box-shadow: 0 -3vh 1vh 0 #A4A4A4 inset, 0 3vh 1vh 0 #bfbfbf inset;
+  display: flex;
   aside {
     width: 20vw;
     height: 80vh;
+    position: absolute;
     p{
-      font-size: 2vh;
+      font-size: 5vh;
       padding-left: 10px;
       margin-top: 30vh;
     }
@@ -111,7 +147,7 @@ section div{
       }
       input {
         width: 80px;
-        height: 60px;
+        height: 20px;
         margin-bottom: 2vh;
         border-radius: 2px;
         background-color: #DDDDDD;
@@ -139,8 +175,51 @@ section div{
     }
   }
   #containerGallery{
+    // display: none;
     background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+    margin: auto auto;
+    padding: 8vh 5vw;
+    #cardImage{
+      float: left;
+      margin-right: 20px;
+      width: 300px;
+      height: 200px;
+      padding-top: 10px;
+      background: url("https://cdn.pixabay.com/photo/2016/06/27/14/57/palette-1482678_960_720.png");
+      background-size: cover;
+      background-position: center;
+    }
+    table tr{
+      height: 5vh;
+      td:nth-of-type(1){
+        padding-right: 2vw;
+        font-weight: bold;
+      }
+      a{
+        width: 80px;
+        text-decoration: none;
+        color: #000;
+        border: 1px solid #000;
+        border-radius: 2px;
+        text-align: center;
+        transition: all 0.3s;
+        padding: 5px;
+        &:hover{
+          background-color: #000;
+          color: #fff;
+          border: 1px solid #fff;
+        }
+      }
+    }
   }
+}
+#galleryURL{
+  font-weight:400;
+}
+#wikidataURL{
+  font-weight:400;
 }
 
 #footer {

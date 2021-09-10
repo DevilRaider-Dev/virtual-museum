@@ -14,7 +14,7 @@
   <!-- Navigation -->
   <div id="wrapper">
     <div id="navbar">
-      <h3>FArtS</h3>
+      <a href="#"><h3>FArtS</h3></a>
       <ul>
         <li><a href="#header">HOME</a></li>
         <li><a href="#discover">DISCOVER</a></li>
@@ -37,7 +37,11 @@
   <!-- 2. Seite: Discover -->
   <section id="discover">
     <!-- carousel -->
-    <div id="containerCaroussel"></div>
+      <a href="#discover" onclick="previous()">previous</a>
+    <div id="containerCaroussel">
+    </div>
+      <a href="#discover" onclick="next()">next</a>
+    
   </section>
   <!-- ********************** -->
 
@@ -45,7 +49,7 @@
   <section id=gallery>
     <aside>
       <form action="">
-        <label for="">Search through your <br> favourite galleries</label>
+        <label for="">Search for your<br> favourite artist</label>
         <input type="text" class="textField" placeholder="Artist" id="inputArtist">
         <!-- <input type="text" class="textField" placeholder="Year" id="inputYear">
         <input type="text" class="textField" placeholder="???" id="">
@@ -55,32 +59,32 @@
       </form>
     </aside>
     <div id="containerGallery">
+      <div id="cardImage"></div>
       <table>
           <tr>
             <td>Name</td>
-            <td>Culture</td>
-            <td>Birthday</td>
-            <td>Birthplace</td>
-            <td>Death</td>
-            <td></td>
-          </tr>
-          <tr>
             <td id="displayname"></td>
-            <td id="culture"></td>
-            <td id="birth"></td>
-            <td id="birthplace"></td>
-            <td id="death"></td>
-            <td id="galleryURL">Gallery</td>
+            <td></td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td id="wikidataURL">Wiki</td>
+            <td>Birth</td>
+            <td id="birth"></td>
           </tr>
-
+          <tr>
+            <td>Culture</td>
+            <td id="culture"></td>
+          </tr>
+          <tr>
+            <td>Birthplace</td>
+            <td id="birthplace"></td>
+          </tr>
+          <tr>
+            <td>Death</td>
+            <td id="death"></td>
+          </tr>
+          <tr></tr>
+          <tr><td><a href="" id="galleryURL">Gallery</a></td><td><a href="" id="wikidataURL">WikiData</a></td></tr>
+      </table>
     </div>
   </section>
 
